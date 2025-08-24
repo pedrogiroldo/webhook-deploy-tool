@@ -31,7 +31,7 @@ const projectsController = new Elysia()
     },
     {
       body: ProjectInputCreate,
-    }
+    },
   )
 
   // PUT /:id - Atualizar project
@@ -42,7 +42,7 @@ const projectsController = new Elysia()
     },
     {
       body: ProjectInputUpdate,
-    }
+    },
   )
 
   // DELETE /:id - Deletar project

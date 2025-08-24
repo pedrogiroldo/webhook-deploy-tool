@@ -30,7 +30,7 @@ const deploymentsController = new Elysia()
     },
     {
       body: DeploymentInputCreate,
-    }
+    },
   )
 
   // PUT /:id - Atualizar deployment
@@ -41,13 +41,12 @@ const deploymentsController = new Elysia()
     },
     {
       body: DeploymentInputUpdate,
-    }
+    },
   )
 
   // DELETE /:id - Deletar deployment
   .delete("/:id", ({ params: { id } }) => {
     return deleteDeployment(id);
-  })
-
+  });
 
 export default deploymentsController;

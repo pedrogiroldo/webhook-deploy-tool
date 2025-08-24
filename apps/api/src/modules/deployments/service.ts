@@ -34,7 +34,7 @@ export function createDeployment(data: typeof DeploymentInputCreate.static) {
 
 export function updateDeployment(
   id: string,
-  data: typeof DeploymentInputUpdate.static
+  data: typeof DeploymentInputUpdate.static,
 ) {
   return prisma.deployment.update({
     where: { id },

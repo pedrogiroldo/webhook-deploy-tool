@@ -34,7 +34,7 @@ export function createProject(data: typeof ProjectInputCreate.static) {
 
 export function updateProject(
   id: string,
-  data: typeof ProjectInputUpdate.static
+  data: typeof ProjectInputUpdate.static,
 ) {
   return prisma.project.update({
     where: { id },
@@ -73,9 +73,9 @@ export async function redeploy(id: string) {
       } catch (error) {
         console.error(
           `Failed to call webhook: ${deployment.webhookUrl}`,
-          error
+          error,
         );
       }
-    })
+    }),
   );
 }
